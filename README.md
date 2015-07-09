@@ -7,6 +7,9 @@
 
 ###效果图
 
+![](https://raw.githubusercontent.com/forwardyzk/adviewpagerdemo/master/src/main/res/drawable/adView.gif)
+
+
 ###导入jar包
 
 >项目中使用了ImagerLoader加载图片,所以要导入com.nostra13.universalimageloader:universal-image-loader包
