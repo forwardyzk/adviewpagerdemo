@@ -7,7 +7,7 @@
 
 ###效果图
 
-![](https://raw.githubusercontent.com/forwardyzk/adviewpagerdemo/master/src/main/res/drawable/adView.gif)
+![](https://raw.githubusercontent.com/forwardyzk/adviewpagerdemo/master/src/main/res/raw/myview.gif)
 
 
 ###导入jar包
