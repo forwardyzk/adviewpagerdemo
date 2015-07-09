@@ -1,0 +1,13 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
+
+    <com.ad.pager.view.AdViewPager
+        android:id="@+id/adviewpager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+    </com.ad.pager.view.AdViewPager>
+
+</RelativeLayout>
