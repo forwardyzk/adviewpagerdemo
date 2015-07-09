@@ -51,7 +51,27 @@ public class MainActivity extends ActionBarActivity {
         adViewPager.setAdClickListener(new AdViewPager.AdClickListener() {
             @Override
             public void clickAd(int position) {
-                Toast.makeText(getApplicationContext(), "" + position, Toast.LENGTH_SHORT).show();
+                switch (position) {
+                    case 0:
+                        Toast.makeText(getApplicationContext(), "点击了第一个广告条", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 1:
+                        Toast.makeText(getApplicationContext(), "点击了第二个广告条", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 2:
+                        Toast.makeText(getApplicationContext(), "点击了第三个广告条", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 3:
+                        Toast.makeText(getApplicationContext(), "点击了第四个广告条", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 4:
+                        Toast.makeText(getApplicationContext(), "点击了第五个广告条", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 5:
+                        Toast.makeText(getApplicationContext(), "点击了第六个广告条", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+
             }
         });
     }

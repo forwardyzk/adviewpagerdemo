@@ -2,7 +2,7 @@
 - 支持本地图片资源和网络资源
 - 自动播放和循环显示
 - 自动填充底部指针按钮
-- 有点击事件- 
+- 有点击事件
 
 ###效果图
 
@@ -45,6 +45,71 @@
         adViewPager.setImagerRescoures(ids);
   
   ```
+  
+  *设置网络资源*
+  
+  使用adViewPager.setImagerUrls(urls);方法设置网络资源
+  
+  例如:
+  ```
+  List<String> urls = new ArrayList<String>();
+        final String url1 = "http://e.hiphotos.baidu.com/image/pic/item/a5c27d1ed21b0ef40f6f1042dec451da81cb3e22.jpg";
+        final String url2 = "http://h.hiphotos.baidu.com/image/pic/item/8601a18b87d6277f59504b3a2b381f30e924fc76.jpg";
+        final String url3 = "http://g.hiphotos.baidu.com/image/pic/item/e1fe9925bc315c60ba5154c68eb1cb13485477d6.jpg";
+        final String url4 = "http://e.hiphotos.baidu.com/image/pic/item/6159252dd42a2834a082bf2858b5c9ea15cebfe9.jpg";
+         urls.add(url1);
+         urls.add(url2);
+         urls.add(url3);
+         urls.add(url4);
+         adViewPager.setImagerUrls(urls);
+  ```
+  
+  - **3.设置点击事件**
+  
+  使用setAdClickListener方法设置点击事件
+  例如:
+  
+  
+```
+adViewPager.setAdClickListener(new AdViewPager.AdClickListener() {
+            @Override
+            public void clickAd(int position) {
+                switch (position) {
+                    case 0:
+                        Toast.makeText(getApplicationContext(), "点击了第一个广告条", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 1:
+                        Toast.makeText(getApplicationContext(), "点击了第二个广告条", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 2:
+                        Toast.makeText(getApplicationContext(), "点击了第三个广告条", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 3:
+                        Toast.makeText(getApplicationContext(), "点击了第四个广告条", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 4:
+                        Toast.makeText(getApplicationContext(), "点击了第五个广告条", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 5:
+                        Toast.makeText(getApplicationContext(), "点击了第六个广告条", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+
+            }
+        });
+```
+
+
+- **4.注意**
+   当Activity销毁的时候,要调用stopTimer()方法
+   
+   ```
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        adViewPager.stopTimer();
+    }
+   ```
 
    
 
