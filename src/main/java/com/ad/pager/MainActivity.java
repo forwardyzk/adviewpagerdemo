@@ -17,14 +17,13 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        adViewPager = (AdViewPager) findViewById(R.id.adviewpager);
         List<Integer> ids = new ArrayList<Integer>();
         ids.add(R.mipmap.image_1);
         ids.add(R.mipmap.image_2);
         ids.add(R.mipmap.image_3);
         ids.add(R.mipmap.image_4);
-        adViewPager = (AdViewPager) findViewById(R.id.adviewpager);
-
-//        adViewPager.setImagerRescoures(ids);
+        adViewPager.setImagerRescoures(ids);
 
         List<String> urls = new ArrayList<String>();
         final String url1 = "http://e.hiphotos.baidu.com/image/pic/item/a5c27d1ed21b0ef40f6f1042dec451da81cb3e22.jpg";

@@ -2,7 +2,7 @@
 - 支持本地图片资源和网络资源
 - 自动播放和循环显示
 - 自动填充底部指针按钮
-- 有点击事件
+- 有点击事件- 
 
 ###效果图
 
@@ -12,7 +12,7 @@
 
 ###使用步骤
 
-- 1.在布局文件中使用自定义的控件
+- **1.在布局文件中使用自定义的控件**
    ```xml
    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -29,4 +29,24 @@
 </RelativeLayout>
 
 ```
+
+- **2.设置显示资源**
+
+   *设置本地资源*
+   
+   使用adViewPager.setImagerRescoures(ids)设置本地资源
+   例如:
+   
+   ```java
+    List<Integer> ids = new ArrayList<Integer>();
+        ids.add(R.mipmap.image_1);
+        ids.add(R.mipmap.image_2);
+        ids.add(R.mipmap.image_3);
+        ids.add(R.mipmap.image_4);
+        adViewPager.setImagerRescoures(ids);
+   
+```
+   
+
+   
 
