@@ -13,7 +13,7 @@
 ###使用步骤
 
 - **1.在布局文件中使用自定义的控件**
-   ```xml
+  ```
    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,7 +27,6 @@
     </com.ad.pager.view.AdViewPager>
 
 </RelativeLayout>
-
 ```
 
 - **2.设置显示资源**
@@ -37,16 +36,15 @@
    使用adViewPager.setImagerRescoures(ids)设置本地资源
    例如:
    
-   ```java
-    List<Integer> ids = new ArrayList<Integer>();
+  ```
+   List<Integer> ids = new ArrayList<Integer>();
         ids.add(R.mipmap.image_1);
         ids.add(R.mipmap.image_2);
         ids.add(R.mipmap.image_3);
         ids.add(R.mipmap.image_4);
         adViewPager.setImagerRescoures(ids);
-   
-```
-   
+  
+  ```
 
    
 
