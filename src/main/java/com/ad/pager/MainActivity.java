@@ -23,6 +23,9 @@ public class MainActivity extends ActionBarActivity {
         ids.add(R.mipmap.image_2);
         ids.add(R.mipmap.image_3);
         ids.add(R.mipmap.image_4);
+        ids.add(R.mipmap.image_5);
+        ids.add(R.mipmap.image_6);
+        ids.add(R.mipmap.image_7);
         adViewPager.setImagerRescoures(ids);
 
         List<String> urls = new ArrayList<String>();
@@ -47,7 +50,7 @@ public class MainActivity extends ActionBarActivity {
         urls.add(url9);
         urls.add(url10);
 
-        adViewPager.setImagerUrls(urls);
+//        adViewPager.setImagerUrls(urls);
         adViewPager.setAdClickListener(new AdViewPager.AdClickListener() {
             @Override
             public void clickAd(int position) {

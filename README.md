@@ -3,6 +3,7 @@
 - 自动播放和循环显示
 - 自动填充底部指针按钮
 - 有点击事件
+- 当触摸在广告条上,自动播放停止,当触摸离开后,继续循环播放
 
 ###效果图
 
@@ -64,7 +65,7 @@
          adViewPager.setImagerUrls(urls);
   ```
   
-  - **3.设置点击事件**
+ - **3.设置点击事件**
   
   使用setAdClickListener方法设置点击事件
   例如:
@@ -110,6 +111,14 @@ adViewPager.setAdClickListener(new AdViewPager.AdClickListener() {
         adViewPager.stopTimer();
     }
    ```
+   
+   要添加联网权限,因为有用到的网络请求图片
+   
+   ```
+    <uses-permission android:name="android.permission.INTERNET" />
 
+   ```
+   不要同时使用setImagerUrls和setImagerRescoures方法.
+  
    
 

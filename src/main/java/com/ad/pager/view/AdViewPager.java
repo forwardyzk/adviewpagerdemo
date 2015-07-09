@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.ad.pager.R;
+import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
@@ -69,7 +70,9 @@ public class AdViewPager extends RelativeLayout {
     }
 
     private void initImageLoader() {
-        ImageLoaderConfiguration configuration = ImageLoaderConfiguration.createDefault(mContext);
+        ImageLoaderConfiguration configuration = new ImageLoaderConfiguration.Builder(mContext)
+                .diskCacheSize(10 * 1024 * 1024).memoryCacheSize(5 * 1024 * 11024).memoryCache(new LruMemoryCache(5 * 1024 * 1024))
+                .build();
         ImageLoader.getInstance().init(configuration);
 
     }
@@ -152,7 +155,7 @@ public class AdViewPager extends RelativeLayout {
                 return false;
             }
         });
-        mTimer.schedule(mTimerTask, 100l, 3000l);
+        mTimer.schedule(mTimerTask, 100l, 4000l);
     }
 
     /**
